@@ -7,4 +7,3 @@ public class Hello {
         System.out.println("초은고 신현고 제물포고");  // sout + Enter
     }
 }
-
