@@ -22,5 +22,6 @@ public class BitOperator {
         System.out.println("69 ^ 31 = " + (69 ^ 31));  // 90
         System.out.println("~31 = " + (~31));   // -32
         System.out.println("-------------------------------");
+        System.out.println("~-1 = " + (~-1));
     }
 }
