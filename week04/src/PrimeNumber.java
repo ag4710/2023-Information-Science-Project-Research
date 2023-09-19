@@ -8,12 +8,15 @@ public class PrimeNumber {
         int number = s.nextInt();
         boolean isPrime = true;
 
-        for(int i=2; i<number; i++){
-            if(number % i == 0) {
-                isPrime = false;
-                break;  // 소스가 아닌 수의 경우 첫 번째 약수가 발견되면 반복문 탈출
+        if(number <= 1)  // 소수 정의 참고
+            isPrime = false;
+        else{
+            for(int i=2; i<number; i++){
+                if(number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
             }
-            // System.out.print(i + " " );  //  확인용
         }
 
         if(isPrime)
