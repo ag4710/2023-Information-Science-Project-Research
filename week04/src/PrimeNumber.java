@@ -6,19 +6,19 @@ public class PrimeNumber {
         System.out.print("Input number : ");
 
         int number = s.nextInt();
-        boolean isPrime = true;  // int -> boolean 메모리 공간 절약, 가독성 up
+        boolean isPrime = true;
 
         for(int i=2; i<number; i++){
             if(number % i == 0) {
-                //count = count + 1;
-                isPrime = false;  // 더하기 연산 제거
+                isPrime = false;
+                break;  // 소스가 아닌 수의 경우 첫 번째 약수가 발견되면 반복문 탈출
             }
+            // System.out.print(i + " " );  //  확인용
         }
 
-        if(isPrime) {  // == 비교연산자 제거
+        if(isPrime)
             System.out.println(number + " is prime number!");
-        }else {
+        else
             System.out.println(number + " is not prime number!");
-        }
     }
 }
