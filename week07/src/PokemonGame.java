@@ -5,9 +5,10 @@ public class PokemonGame {
         Pikachu pikachu1 = new Pikachu();  // 기본생성자 호출
         Pikachu pikachu2 = new Pikachu(150, "라이츄"); //매개변수 생성자 호출
 
+        System.out.println(squirtle1.getName());
         pikachu1.attack("전기쇼크 ");
         squirtle1.attack("물대포 ");
-        System.out.println(pikachu2.name);
-        System.out.println(pikachu2.hp);
+        System.out.println(pikachu2.getName());
+        System.out.println(pikachu2.getHp());
     }
 }
