@@ -2,6 +2,8 @@ public abstract class Pokemon {
     private int hp;
     private String name;  // 외부 클래스에서 접근 모하도록 캡슐화
 
+    protected  int level;
+
     public int getHp() {
         return hp;
     }
@@ -22,8 +24,9 @@ public abstract class Pokemon {
     public Pokemon() {
     }
     // 매개변수 생성자
-    public Pokemon(int hp, String name) {
+    public Pokemon(int hp, String name, int level) {
         this.hp = hp;
         this.name = name;
+        this.level = level;
     }
 }
