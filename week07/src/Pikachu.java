@@ -1,0 +1,18 @@
+public class Pikachu extends Pokemon{ // Pikachu is a Pokemon, Inheritance
+
+    public Pikachu() {
+        hp = 100;
+        name = "피카츄";
+        System.out.println("피카피카~");
+    }
+
+    public Pikachu(int hp, String name) {  // 가독성을 위해 매개변수 이름을 name으로
+        this.name = name;  // 매개변수와 멤버변수(필드)를 구분하기 위해 this 키워드 사용
+        this.hp = hp;
+        System.out.println("라이츄라이츄~");
+    }
+
+    public void attack(String skill) {
+        System.out.println(skill + "공격시전!");
+    }
+}
