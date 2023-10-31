@@ -9,7 +9,7 @@ public class Squirtle extends Pokemon{ // Squirtle is a Pokemon, Inheritance
         System.out.println("꼬북꼬북~");
     }
 
-    public void attack(String skill) {
-        System.out.println(getName() + "가(이) " + skill + " 공격시전(물속성)!");
+    public void attack(Pokemon targetPokemon, String skill) {
+        System.out.println(this.getName() + "가(이) " + targetPokemon.getName() + "에게 " + skill + " 공격시전(물)!");
     }
 }

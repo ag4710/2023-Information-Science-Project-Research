@@ -16,7 +16,7 @@ public class Pikachu extends Pokemon{ // Pikachu is a Pokemon, Inheritance
         System.out.println("라이츄라이츄~");
     }
 
-    public void attack(String skill) {
-        System.out.println(getName() + "가(이) " + skill + " 공격시전(전기속성)!");
+    public void attack(Pokemon targetPokemon, String skill) {
+        System.out.println(this.getName() + "가(이) " + targetPokemon.getName() +  "에게 " + skill + " 공격시전(전기)!");
     }
 }
