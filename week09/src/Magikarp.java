@@ -2,7 +2,7 @@ public class Magikarp extends Pokemon{
     public Magikarp() {
         this.setHp(20);
         this.setName("잉어킹");
-        this.attackRate = 10;
+        this.attackRate = (int)(Math.random() * 7) + 10;  // 10 ~ 16
         this.defenceRate = 55;
         this.level = 1;
         System.out.println("잉잉~");
