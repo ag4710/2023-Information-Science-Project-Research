@@ -32,7 +32,10 @@ public class PokemonGame {
             int menu = s.nextInt();
             if (menu == 1){
                 System.out.println("전투를 시작합니다");
-                playerPokemon.attack(enemyPokemon, "몸통박치기");
+                System.out.print("사용할 기술 : 1)" + playerPokemon.skills[0] + " 2) " + playerPokemon.skills[1] + " 3) " + playerPokemon.skills[2] + " : ");
+//                int skill = s.nextInt();
+//                playerPokemon.attack(enemyPokemon, skill-1);
+                playerPokemon.attack(enemyPokemon, s.nextInt()-1);
             } else if (menu == 2){
                 System.out.println("지역을 탈출 합니다.");
             } else if (menu == 3){

@@ -7,6 +7,8 @@ public abstract class Pokemon {
 
     protected int attackRate;
     protected int defenceRate;
+    protected String[] skills;  // 포켓몬 공격 기술들
+    protected int[] skillPoints;  // 해당 공격 기술에 상응하는 값
 
     // 기본 생성자
     public Pokemon() {
@@ -35,6 +37,6 @@ public abstract class Pokemon {
     }
 
     // method
-    public abstract void attack(Pokemon p, String s);  // 추상 메서드, 반드시 상속 받는 자식 클래스는 본체를 구현해야 한다
+    public abstract void attack(Pokemon p, int s);  // 추상 메서드, 반드시 상속 받는 자식 클래스는 본체를 구현해야 한다
     // Pokemon을 상속 받는 모든 자식 클래스가 공격 대상
 }
