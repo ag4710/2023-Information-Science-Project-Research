@@ -6,20 +6,22 @@ public class PokemonGame {
 
     public  static  void createEnemy(){
         System.out.println("야생의 포켓몬이 나타났습니다");
-        int pickEnemy = (int)(Math.random()*3);  // 0 ~ 2
+        int pickEnemy = (int)(Math.random() * 4);  // 0 ~ 3
         if (pickEnemy == 0){
             enemyPokemon = new Pikachu();
         } else if(pickEnemy == 1){
             enemyPokemon = new Squirtle();
         } else if(pickEnemy == 2){
             enemyPokemon = new Magikarp();
+        } else if(pickEnemy == 3){
+            enemyPokemon = new Charizard();
         }
     }
 
     public static void main(String[] args) {
         System.out.println("포켓몬 게임 시작~");
         Scanner s = new Scanner(System.in);
-        System.out.print("플레이어 포켓몬 선택\n1) 피카츄   2) 꼬부기   3) 잉어킹 : ");
+        System.out.print("플레이어 포켓몬 선택\n1) 피카츄   2) 꼬부기   3) 잉어킹   4) 리자몽: ");
         int pick = s.nextInt();
 
         Pokemon playerPokemon = null;
@@ -29,6 +31,9 @@ public class PokemonGame {
             playerPokemon = new Squirtle();
         } else if(pick == 3){
             playerPokemon = new Magikarp();
+        } else if(pick == 4){
+            playerPokemon = new Charizard();
+            playerPokemon.fly();
         }
 
         createEnemy();

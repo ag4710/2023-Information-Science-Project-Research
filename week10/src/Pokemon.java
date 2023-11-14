@@ -39,4 +39,6 @@ public abstract class Pokemon {
     // method
     public abstract void attack(Pokemon p, int s);  // 추상 메서드, 반드시 상속 받는 자식 클래스는 본체를 구현해야 한다
     // Pokemon을 상속 받는 모든 자식 클래스가 공격 대상
+
+    abstract void fly();
 }

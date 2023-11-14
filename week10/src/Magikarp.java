@@ -28,4 +28,9 @@ public class Magikarp extends Pokemon{
             System.out.println(targetPokemon.getName() + "의 체력은 " + targetPokemon.getHp() + "입니다.");
         }
     }
+
+    @Override
+    void fly() {
+
+    }
 }

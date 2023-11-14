@@ -37,4 +37,9 @@ public class Pikachu extends Pokemon{ // Pikachu is a Pokemon, Inheritance
             System.out.println(targetPokemon.getName() + "의 체력은 " + targetPokemon.getHp() + "입니다.");
         }
     }
+
+    @Override
+    void fly() {
+
+    }
 }
