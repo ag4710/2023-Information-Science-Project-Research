@@ -34,9 +34,9 @@ public class PokemonGame {
         createEnemy();
 
         while(true){
-            System.out.print("1) 전투   2) 도망   3) 종료 : ");
+            System.out.print("1) 전투   2) 도망   3)물약(체력)   4)물약(공격력)   5) 종료 : ");
             int menu = s.nextInt();
-            if (menu == 1){
+            if (menu == 1) {
                 System.out.println("전투를 시작합니다");
                 System.out.print("사용할 기술 : 1)" + playerPokemon.skills[0] + " 2) " + playerPokemon.skills[1] + " 3) " + playerPokemon.skills[2] + " : ");
 //                int skill = s.nextInt();
@@ -44,10 +44,18 @@ public class PokemonGame {
                 playerPokemon.attack(enemyPokemon, s.nextInt()-1);  // 플레이어 공격
                 System.out.println("======");
                 enemyPokemon.attack(playerPokemon, (int)(Math.random() * 3));  // 적군 공격
-            } else if (menu == 2){
+            } else if (menu == 2) {
                 System.out.println("지역을 탈출 합니다.");
-                createEnemy();
-            } else if (menu == 3){
+                createEnemy();  // 적군 다시 생성
+            } else if (menu == 3) {
+                System.out.println("현재 체력은 " + playerPokemon.getHp() + "입니다.  +50hp 물약을 마십니다.");
+                playerPokemon.setHp(playerPokemon.getHp() + 50);
+                System.out.println("업데이트된 체력은 " + playerPokemon.getHp());
+            } else if (menu == 4) {
+                System.out.println("현재 공격력은 " + playerPokemon.attackRate + "입니다.  +40 attack point 물약을 마십니다.");
+                playerPokemon.attackRate = playerPokemon.attackRate + 40;
+                System.out.println("업데이트된 공격력은 " + playerPokemon.attackRate);
+            } else if (menu == 5) {
                 System.out.println("프로그램을 종료합니다!");
                 break;
             }
