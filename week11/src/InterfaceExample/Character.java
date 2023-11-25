@@ -1,3 +1,5 @@
+package InterfaceExample;
+
 public class Character {
     private int hp;
 

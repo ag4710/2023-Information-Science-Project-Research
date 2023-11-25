@@ -1,3 +1,5 @@
+package InterfaceExample;
+
 public class GameDemo {
     public static void main(String[] args) {
         King king = new King(); // 왕 캐릭터 객체 생성
