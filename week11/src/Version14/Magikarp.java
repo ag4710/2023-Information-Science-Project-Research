@@ -1,6 +1,6 @@
-package LastPokemonGame;
+package Version14;
 
-public class Magikarp extends Pokemon {
+public class Magikarp extends Pokemon{
     public Magikarp() {
         this.setHp(20);
         this.setName("잉어킹");
@@ -29,10 +29,5 @@ public class Magikarp extends Pokemon {
         else {
             System.out.println(targetPokemon.getName() + "의 체력은 " + targetPokemon.getHp() + "입니다.");
         }
-    }
-
-    @Override
-    void fly() {
-
     }
 }

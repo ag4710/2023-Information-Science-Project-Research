@@ -1,4 +1,4 @@
-package LastPokemonGame;
+package Version14;
 
 public abstract class Pokemon {
     // 필드
@@ -42,5 +42,11 @@ public abstract class Pokemon {
     public abstract void attack(Pokemon p, int s);  // 추상 메서드, 반드시 상속 받는 자식 클래스는 본체를 구현해야 한다
     // Pokemon을 상속 받는 모든 자식 클래스가 공격 대상
 
-    abstract void fly();
+    Flyable flyable;
+
+    public void setFlyable(Flyable flyable) {
+        this.flyable = flyable;
+    }
+
+    public void useFlyable() { this.flyable.fly(); }
 }

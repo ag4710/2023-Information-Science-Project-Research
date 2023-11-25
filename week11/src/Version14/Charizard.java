@@ -1,6 +1,6 @@
-package LastPokemonGame;
+package Version14;
 
-public class Charizard extends Pokemon implements Flyable {
+public class Charizard extends Pokemon {
     public Charizard() {
         this.setHp(78);
         this.setName("리자몽");
@@ -31,10 +31,5 @@ public class Charizard extends Pokemon implements Flyable {
         else {
             System.out.println(targetPokemon.getName() + "의 체력은 " + targetPokemon.getHp() + "입니다.");
         }
-    }
-
-    @Override
-    public void fly() {
-        System.out.println("날개를 펼쳐 날아갑니다.");
     }
 }

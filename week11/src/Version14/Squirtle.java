@@ -1,6 +1,6 @@
-package LastPokemonGame;
+package Version14;
 
-public class Squirtle extends Pokemon { // Squirtle is a Pokemon, Inheritance
+public class Squirtle extends Pokemon{ // Squirtle is a Pokemon, Inheritance
 
     public Squirtle() {
         this.setHp(44);  // private 접근자
@@ -25,10 +25,5 @@ public class Squirtle extends Pokemon { // Squirtle is a Pokemon, Inheritance
         else {
             System.out.println(targetPokemon.getName() + "의 체력은 " + targetPokemon.getHp() + "입니다.");
         }
-    }
-
-    @Override
-    void fly() {
-
     }
 }

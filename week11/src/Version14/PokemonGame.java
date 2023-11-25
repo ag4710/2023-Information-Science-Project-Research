@@ -1,4 +1,4 @@
-package LastPokemonGame;
+package Version14;
 
 import java.util.Scanner;
 
@@ -26,16 +26,22 @@ public class PokemonGame {
         System.out.print("플레이어 포켓몬 선택\n1) 피카츄   2) 꼬부기   3) 잉어킹   4) 리자몽: ");
         int pick = s.nextInt();
 
+        boolean useJetPack = false;
+
         Pokemon playerPokemon = null;
         if (pick == 1){
             playerPokemon = new Pikachu();
+            playerPokemon.setFlyable(new NoFly());
+            useJetPack = true;
         } else if(pick == 2){
             playerPokemon = new Squirtle();
+            playerPokemon.setFlyable(new NoFly());
         } else if(pick == 3){
             playerPokemon = new Magikarp();
+            playerPokemon.setFlyable(new NoFly());
         } else if(pick == 4){
             playerPokemon = new Charizard();
-            playerPokemon.fly();
+            playerPokemon.setFlyable(new Flywithwings());
         }
 
         createEnemy();
@@ -52,6 +58,8 @@ public class PokemonGame {
                 System.out.println("======");
                 enemyPokemon.attack(playerPokemon, (int)(Math.random() * 3));  // 적군 공격
             } else if (menu == 2) {
+                if(useJetPack == true) playerPokemon.setFlyable(new FlywithJetPack());
+                playerPokemon.useFlyable();
                 System.out.println("지역을 탈출 합니다.");
                 createEnemy();  // 적군 다시 생성
             } else if (menu == 3) {

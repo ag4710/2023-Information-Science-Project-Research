@@ -1,6 +1,6 @@
-package LastPokemonGame;
+package Version14;
 
-public class Pikachu extends Pokemon { // Pikachu is a Pokemon, Inheritance
+public class Pikachu extends Pokemon{ // Pikachu is a Pokemon, Inheritance
 
     public Pikachu() {
         // hp = 100;
@@ -38,10 +38,5 @@ public class Pikachu extends Pokemon { // Pikachu is a Pokemon, Inheritance
         else {
             System.out.println(targetPokemon.getName() + "의 체력은 " + targetPokemon.getHp() + "입니다.");
         }
-    }
-
-    @Override
-    void fly() {
-
     }
 }
